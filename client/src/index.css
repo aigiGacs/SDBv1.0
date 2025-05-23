@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* First year colors */
+  --first-primary: 231 44% 48%;    /* #3f51b5 */
+  --first-secondary: 232 44% 58%;  /* #5c6bc0 */
+  --first-light: 227 58% 97%;      /* #e8eaf6 */
+  
+  /* Second year colors */
+  --second-primary: 174 100% 27%;  /* #00897b */
+  --second-secondary: 174 59% 40%; /* #26a69a */
+  --second-light: 175 59% 95%;     /* #e0f2f1 */
+  
+  /* Third year colors */
+  --third-primary: 14 89% 50%;     /* #e64a19 */
+  --third-secondary: 14 100% 63%;  /* #ff7043 */
+  --third-light: 9 100% 97%;       /* #fbe9e7 */
+  
+  /* Status colors */
+  --info: 207 90% 54%;     /* #2196f3 */
+  --success: 122 39% 49%;  /* #4caf50 */
+  --warning: 36 100% 50%;  /* #ff9800 */
+  --error: 4 90% 58%;      /* #f44336 */
+  
+  /* Sidebar colors */
+  --sidebar-background: 240 10% 3.9%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 207 90% 54%;
+  --sidebar-primary-foreground: 211 100% 99%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 0 0% 98%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 240 4.9% 83.9%;
+  
+  /* Chart colors */
+  --chart-1: 207 90% 54%;
+  --chart-2: 174 100% 27%;
+  --chart-3: 14 89% 50%;
+  --chart-4: 122 39% 49%;
+  --chart-5: 36 100% 50%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  
+  /* First year colors - dark mode */
+  --first-primary: 231 44% 58%;
+  --first-secondary: 232 44% 48%;
+  --first-light: 227 30% 15%;
+  
+  /* Second year colors - dark mode */
+  --second-primary: 174 70% 35%;
+  --second-secondary: 174 60% 25%;
+  --second-light: 175 30% 15%;
+  
+  /* Third year colors - dark mode */
+  --third-primary: 14 80% 55%;
+  --third-secondary: 14 70% 45%;
+  --third-light: 9 30% 15%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom styles for year-specific components */
+.bg-first-primary {
+  background-color: hsl(var(--first-primary));
+}
+
+.bg-first-secondary {
+  background-color: hsl(var(--first-secondary));
+}
+
+.bg-first-light {
+  background-color: hsl(var(--first-light));
+}
+
+.text-first-primary {
+  color: hsl(var(--first-primary));
+}
+
+.text-first-secondary {
+  color: hsl(var(--first-secondary));
+}
+
+.border-first-primary {
+  border-color: hsl(var(--first-primary));
+}
+
+.bg-second-primary {
+  background-color: hsl(var(--second-primary));
+}
+
+.bg-second-secondary {
+  background-color: hsl(var(--second-secondary));
+}
+
+.bg-second-light {
+  background-color: hsl(var(--second-light));
+}
+
+.text-second-primary {
+  color: hsl(var(--second-primary));
+}
+
+.text-second-secondary {
+  color: hsl(var(--second-secondary));
+}
+
+.border-second-primary {
+  border-color: hsl(var(--second-primary));
+}
+
+.bg-third-primary {
+  background-color: hsl(var(--third-primary));
+}
+
+.bg-third-secondary {
+  background-color: hsl(var(--third-secondary));
+}
+
+.bg-third-light {
+  background-color: hsl(var(--third-light));
+}
+
+.text-third-primary {
+  color: hsl(var(--third-primary));
+}
+
+.text-third-secondary {
+  color: hsl(var(--third-secondary));
+}
+
+.border-third-primary {
+  border-color: hsl(var(--third-primary));
+}
+
+/* Status colors */
+.border-info {
+  border-color: hsl(var(--info));
+}
+
+.text-info {
+  color: hsl(var(--info));
+}
+
+.border-warning {
+  border-color: hsl(var(--warning));
+}
+
+.text-warning {
+  color: hsl(var(--warning));
+}
+
+.border-error {
+  border-color: hsl(var(--error));
+}
+
+.text-error {
+  color: hsl(var(--error));
+}
+
+.border-success {
+  border-color: hsl(var(--success));
+}
+
+.text-success {
+  color: hsl(var(--success));
+}
+
+/* Card hover animation */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
